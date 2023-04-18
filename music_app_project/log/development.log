@@ -1,0 +1,245 @@
+  [1m[35m (527.8ms)[0m  [1m[35mCREATE DATABASE "music_app_project_development" ENCODING = 'unicode'[0m
+  [1m[35m (360.9ms)[0m  [1m[35mCREATE DATABASE "music_app_project_test" ENCODING = 'unicode'[0m
+  [1m[35m (48.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7599688313472336375)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUser (20230418175816)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (60.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230418175816"]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-18 18:04:05.061962"], ["updated_at", "2023-04-18 18:04:05.061962"]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7599688313472336375)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2023-04-18 16:15:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/user" for ::1 at 2023-04-18 16:15:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2023-04-18 16:15:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-04-18 16:18:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/user" for ::1 at 2023-04-18 16:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2023-04-18 16:20:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-04-18 16:23:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2023-04-18 16:24:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Zeitwerk::NameError - expected file /Users/appacademy/Desktop/AppAcademy Folder/classwork/w7d2/practice-for-ch-rails-music-app-long-practice-main/music_app_project/app/controllers/users_controller.rb to define constant UsersController, but didn't
+      raise Zeitwerk::NameError.new(msg, cref.last)
+      ^^^^^:
+
+Started POST "/__better_errors/c9adaaca59c1531c/variables" for ::1 at 2023-04-18 16:24:36 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:27:33 -0400
+
+ActionController::RoutingError - uninitialized constant UsersController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Users_Controller
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/e2cf1545af8d3cb0/variables" for ::1 at 2023-04-18 16:27:33 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:28:19 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 775)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting `end'
+  attr_reader: :password
+             ^:
+  app/models/user.rb:12:in `'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/b7e97af89db55759/variables" for ::1 at 2023-04-18 16:28:19 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:28:50 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 5795)
+
+
+
+NoMethodError - undefined method `valdiates' for User:Class
+Did you mean?  validates
+               validates!
+               validate:
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/5426ef9603f346c6/variables" for ::1 at 2023-04-18 16:28:50 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:29:04 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 12617)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 5.2ms | Allocations: 20118)
+
+
+
+NoMethodError - undefined method `logged_in?' for #<ActionView::Base:0x00000000006068>
+Did you mean?  logger?:
+  app/views/layouts/application.html.erb:14
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/1e05c78f5a41971b/variables" for ::1 at 2023-04-18 16:29:04 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:30:07 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  [1m[36mUser Load (44.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 4140)
+Completed 200 OK in 80ms (Views: 15.2ms | ActiveRecord: 56.1ms | Allocations: 7396)
+
+
+Started GET "/users/new" for ::1 at 2023-04-18 16:30:33 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2061)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 2332)
+
+
+Started GET "/session/new" for ::1 at 2023-04-18 16:30:34 -0400
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 764)
+
+
+
+ActionController::MissingExactTemplate - SessionsController#new is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/0f8be1fb56551c49/variables" for ::1 at 2023-04-18 16:30:34 -0400
+Started POST "/__better_errors/0f8be1fb56551c49/variables" for ::1 at 2023-04-18 16:30:37 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:41:25 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 6175)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 6263)
+Completed 500 Internal Server Error in 25ms (Allocations: 6969)
+
+
+
+NoMethodError - undefined method `username' for #<User id: nil, email: nil, password_digest: nil, session_token: nil, created_at: nil, updated_at: nil>:
+  app/views/users/new.html.erb:11
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/a3fde8fa4ccbe9fb/variables" for ::1 at 2023-04-18 16:41:25 -0400
+Started POST "/__better_errors/a3fde8fa4ccbe9fb/variables" for ::1 at 2023-04-18 16:41:31 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:42:07 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 6027)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6115)
+Completed 500 Internal Server Error in 20ms (Allocations: 6814)
+
+
+
+NoMethodError - undefined method `username' for #<User id: nil, email: nil, password_digest: nil, session_token: nil, created_at: nil, updated_at: nil>:
+  app/views/users/new.html.erb:11
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/8454a16be899b357/variables" for ::1 at 2023-04-18 16:42:07 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:43:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 318)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 6937)
+Completed 200 OK in 89ms (Views: 64.1ms | ActiveRecord: 8.3ms | Allocations: 14783)
+
+
+Started GET "/users/new" for ::1 at 2023-04-18 16:43:38 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 6013)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 6111)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 6842)
+
+
+
+NameError - undefined local variable or method `users' for #<ActionView::Base:0x00000000004380>
+Did you mean?  @user:
+  app/views/users/new.html.erb:1
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/9539eff7bd089518/variables" for ::1 at 2023-04-18 16:43:38 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:45:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 7241)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 7351)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 8.6ms | Allocations: 15138)
+
+
+
+NoMethodError - undefined method `username' for #<User id: nil, email: nil, password_digest: nil, session_token: nil, created_at: nil, updated_at: nil>:
+  app/views/users/new.html.erb:11
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/a2e75227910f2421/variables" for ::1 at 2023-04-18 16:45:03 -0400
+Started GET "/users/new" for ::1 at 2023-04-18 16:45:26 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 102)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 6495)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.7ms | Allocations: 7288)
+
+
+Started GET "/users" for ::1 at 2023-04-18 16:49:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2023-04-18 16:49:55 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2184)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 1.2ms | Allocations: 2468)
+
+
